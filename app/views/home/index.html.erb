@@ -1,0 +1,17 @@
+<h1>Twitter app</h1>
+<p><%= @brand  %></p>
+
+<ul>
+  <% @tweets.each do |tweet| %>
+  <li><%= tweet.message %></li>
+  <li><%= tweet.created_at.strftime(" %a %d %b %Y %H:%M:%S" )  %></li>
+  <li><%= time_ago_in_words(tweet.created_at) %></li>
+  <% end   %>
+</ul>
+
+ <%#= Time.zone.now %>
+
+
+<!-- <div class="tweet-swap">
+
+</div> -->
